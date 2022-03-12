@@ -111,9 +111,18 @@
                                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
                             </script>
                             <p></p>
-                            <p>This RFM (Recency, Frequency, Monetary) analysis was performed on a public dataset called <a href="https://archive.ics.uci.edu/ml/datasets/online+retail#">Online Retail Data Set</a>, which contains transactions for a UK online retail. I first used python </p>
+                            <p>This RFM (Recency, Frequency, Monetary value) analysis was performed on the <a href="https://archive.ics.uci.edu/ml/datasets/online+retail#">Online Retail Data Set</a>, which contains transactions for a UK online retail. Recency, Frequency and Monetary value were queried in MySQL and exported to Tableau for visualization. For segmentation, customers were first assigned a tier for each RFM metric based on percentiles, then segmented into different cohorts where those in the "555" group made the most recent, frequent, and highest-total-amount purchases.</p>
                             <p></p>
-                            <p>BI tools used: MySQL Workbench, Tableau</p>
+                            <p>In addition to manually segmenting the customers based on pre-determined percentile thresholds, K-means clustering was employed in Python to classify the customers into three different groups. Further queries and graphs were created using the clusters to extract more insights about the transactions. Lastly, Random Forest classifier was trained on 70% of the dataset, and achieved a 100% accuracy in predicting a customer's cluster. </p>
+                            <p></p>
+                            <p>BI tools used: MySQL Workbench, Tableau, Python</p>
+                            <p></p>
+                            <style>
+                            img {
+                              width: 50%;
+                            }
+                            </style>
+                            <img src='/assets/img/3d_scatter.png' style='float: top;' />
                         </div>
                     </div>
                 </div>
